@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5043C64918BDC1D4007A7901 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5043C64818BDC1D4007A7901 /* MapAnnotation.m */; };
+		5043C64D18BDD4A0007A7901 /* GPSCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5043C64C18BDD4A0007A7901 /* GPSCoordinate.m */; };
+		5043C65018BDD4AE007A7901 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5043C64F18BDD4AE007A7901 /* Trip.m */; };
+		50A25BE218BD8BBE000EF19C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F08BFD18BA8FE800B5F260 /* CoreData.framework */; };
+		50A25BE718BD8D2B000EF19C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50A25BE518BD8D2B000EF19C /* Model.xcdatamodeld */; };
+		50A720F318BA7B0900B2D218 /* MapRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A720F218BA7B0900B2D218 /* MapRootViewController.m */; };
+		50A720F918BA7C1E00B2D218 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A720F818BA7C1E00B2D218 /* MapKit.framework */; };
+		50A7214718BA7D3700B2D218 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A7214618BA7D3700B2D218 /* Main_iPad.storyboard */; };
+		50CBEA1C18B55EA900BD729B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CBEA1B18B55EA900BD729B /* Foundation.framework */; };
+		50CBEA1E18B55EA900BD729B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CBEA1D18B55EA900BD729B /* CoreGraphics.framework */; };
+		50CBEA2018B55EA900BD729B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CBEA1F18B55EA900BD729B /* UIKit.framework */; };
+		50CBEA2618B55EA900BD729B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50CBEA2418B55EA900BD729B /* InfoPlist.strings */; };
+		50CBEA2818B55EA900BD729B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CBEA2718B55EA900BD729B /* main.m */; };
+		50CBEA2C18B55EA900BD729B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CBEA2B18B55EA900BD729B /* AppDelegate.m */; };
+		50CBEA2F18B55EA900BD729B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CBEA2D18B55EA900BD729B /* Main_iPhone.storyboard */; };
+		50CBEA3418B55EAA00BD729B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CBEA3318B55EAA00BD729B /* Images.xcassets */; };
+		50CBEA3B18B55EAA00BD729B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CBEA3A18B55EAA00BD729B /* XCTest.framework */; };
+		50CBEA3C18B55EAA00BD729B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CBEA1B18B55EA900BD729B /* Foundation.framework */; };
+		50CBEA3D18B55EAA00BD729B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CBEA1F18B55EA900BD729B /* UIKit.framework */; };
+		50CBEA4518B55EAA00BD729B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50CBEA4318B55EAA00BD729B /* InfoPlist.strings */; };
+		50CBEA4718B55EAA00BD729B /* DriveSense_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CBEA4618B55EAA00BD729B /* DriveSense_iOSTests.m */; };
+		50F08CB018BAB11F00B5F260 /* TripRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F08CAF18BAB11F00B5F260 /* TripRecorder.m */; };
+		50F08CB218BAB42400B5F260 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F08CB118BAB42400B5F260 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50CBEA3E18B55EAA00BD729B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50CBEA1018B55EA900BD729B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50CBEA1718B55EA900BD729B;
+			remoteInfo = DriveSense_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5043C64718BDC1D4007A7901 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		5043C64818BDC1D4007A7901 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		5043C64B18BDD4A0007A7901 /* GPSCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSCoordinate.h; sourceTree = "<group>"; };
+		5043C64C18BDD4A0007A7901 /* GPSCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSCoordinate.m; sourceTree = "<group>"; };
+		5043C64E18BDD4AE007A7901 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		5043C64F18BDD4AE007A7901 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		50A25BE618BD8D2B000EF19C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		50A720F118BA7B0900B2D218 /* MapRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapRootViewController.h; path = ../MapRootViewController.h; sourceTree = "<group>"; };
+		50A720F218BA7B0900B2D218 /* MapRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapRootViewController.m; path = ../MapRootViewController.m; sourceTree = "<group>"; };
+		50A720F818BA7C1E00B2D218 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		50A7214618BA7D3700B2D218 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		50CBEA1818B55EA900BD729B /* DriveSense_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveSense_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50CBEA1B18B55EA900BD729B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		50CBEA1D18B55EA900BD729B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		50CBEA1F18B55EA900BD729B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		50CBEA2318B55EA900BD729B /* DriveSense_iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DriveSense_iOS-Info.plist"; sourceTree = "<group>"; };
+		50CBEA2518B55EA900BD729B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50CBEA2718B55EA900BD729B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50CBEA2918B55EA900BD729B /* DriveSense_iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DriveSense_iOS-Prefix.pch"; sourceTree = "<group>"; };
+		50CBEA2A18B55EA900BD729B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50CBEA2B18B55EA900BD729B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50CBEA2E18B55EA900BD729B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		50CBEA3318B55EAA00BD729B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		50CBEA3918B55EAA00BD729B /* DriveSense_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveSense_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50CBEA3A18B55EAA00BD729B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		50CBEA4218B55EAA00BD729B /* DriveSense_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DriveSense_iOSTests-Info.plist"; sourceTree = "<group>"; };
+		50CBEA4418B55EAA00BD729B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50CBEA4618B55EAA00BD729B /* DriveSense_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriveSense_iOSTests.m; sourceTree = "<group>"; };
+		50F08BFD18BA8FE800B5F260 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		50F08CAE18BAB11F00B5F260 /* TripRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripRecorder.h; sourceTree = "<group>"; };
+		50F08CAF18BAB11F00B5F260 /* TripRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripRecorder.m; sourceTree = "<group>"; };
+		50F08CB118BAB42400B5F260 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50CBEA1518B55EA900BD729B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A25BE218BD8BBE000EF19C /* CoreData.framework in Frameworks */,
+				50F08CB218BAB42400B5F260 /* CoreLocation.framework in Frameworks */,
+				50A720F918BA7C1E00B2D218 /* MapKit.framework in Frameworks */,
+				50CBEA1E18B55EA900BD729B /* CoreGraphics.framework in Frameworks */,
+				50CBEA2018B55EA900BD729B /* UIKit.framework in Frameworks */,
+				50CBEA1C18B55EA900BD729B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50CBEA3618B55EAA00BD729B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50CBEA3B18B55EAA00BD729B /* XCTest.framework in Frameworks */,
+				50CBEA3D18B55EAA00BD729B /* UIKit.framework in Frameworks */,
+				50CBEA3C18B55EAA00BD729B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5043C64618BDC194007A7901 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50A25BE518BD8D2B000EF19C /* Model.xcdatamodeld */,
+				5043C64E18BDD4AE007A7901 /* Trip.h */,
+				5043C64F18BDD4AE007A7901 /* Trip.m */,
+				5043C64B18BDD4A0007A7901 /* GPSCoordinate.h */,
+				5043C64C18BDD4A0007A7901 /* GPSCoordinate.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		50A720F418BA7B1D00B2D218 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50A720F118BA7B0900B2D218 /* MapRootViewController.h */,
+				50A720F218BA7B0900B2D218 /* MapRootViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		50CBEA0F18B55EA900BD729B = {
+			isa = PBXGroup;
+			children = (
+				50CBEA2118B55EA900BD729B /* DriveSense_iOS */,
+				50CBEA4018B55EAA00BD729B /* DriveSense_iOSTests */,
+				50CBEA1A18B55EA900BD729B /* Frameworks */,
+				50CBEA1918B55EA900BD729B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50CBEA1918B55EA900BD729B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50CBEA1818B55EA900BD729B /* DriveSense_iOS.app */,
+				50CBEA3918B55EAA00BD729B /* DriveSense_iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50CBEA1A18B55EA900BD729B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50F08CB118BAB42400B5F260 /* CoreLocation.framework */,
+				50F08BFD18BA8FE800B5F260 /* CoreData.framework */,
+				50A720F818BA7C1E00B2D218 /* MapKit.framework */,
+				50CBEA1B18B55EA900BD729B /* Foundation.framework */,
+				50CBEA1D18B55EA900BD729B /* CoreGraphics.framework */,
+				50CBEA1F18B55EA900BD729B /* UIKit.framework */,
+				50CBEA3A18B55EAA00BD729B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50CBEA2118B55EA900BD729B /* DriveSense_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				50CBEA2A18B55EA900BD729B /* AppDelegate.h */,
+				50CBEA2B18B55EA900BD729B /* AppDelegate.m */,
+				50CBEA2D18B55EA900BD729B /* Main_iPhone.storyboard */,
+				50A7214618BA7D3700B2D218 /* Main_iPad.storyboard */,
+				5043C64618BDC194007A7901 /* Model */,
+				50A720F418BA7B1D00B2D218 /* Controllers */,
+				50F08CAD18BAB10200B5F260 /* Misc Objects */,
+				50CBEA2218B55EA900BD729B /* Supporting Files */,
+				50CBEA3318B55EAA00BD729B /* Images.xcassets */,
+			);
+			path = DriveSense_iOS;
+			sourceTree = "<group>";
+		};
+		50CBEA2218B55EA900BD729B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50CBEA2318B55EA900BD729B /* DriveSense_iOS-Info.plist */,
+				50CBEA2418B55EA900BD729B /* InfoPlist.strings */,
+				50CBEA2718B55EA900BD729B /* main.m */,
+				50CBEA2918B55EA900BD729B /* DriveSense_iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50CBEA4018B55EAA00BD729B /* DriveSense_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				50CBEA4618B55EAA00BD729B /* DriveSense_iOSTests.m */,
+				50CBEA4118B55EAA00BD729B /* Supporting Files */,
+			);
+			path = DriveSense_iOSTests;
+			sourceTree = "<group>";
+		};
+		50CBEA4118B55EAA00BD729B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50CBEA4218B55EAA00BD729B /* DriveSense_iOSTests-Info.plist */,
+				50CBEA4318B55EAA00BD729B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50F08CAD18BAB10200B5F260 /* Misc Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5043C64718BDC1D4007A7901 /* MapAnnotation.h */,
+				5043C64818BDC1D4007A7901 /* MapAnnotation.m */,
+				50F08CAE18BAB11F00B5F260 /* TripRecorder.h */,
+				50F08CAF18BAB11F00B5F260 /* TripRecorder.m */,
+			);
+			name = "Misc Objects";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50CBEA1718B55EA900BD729B /* DriveSense_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50CBEA4A18B55EAA00BD729B /* Build configuration list for PBXNativeTarget "DriveSense_iOS" */;
+			buildPhases = (
+				50CBEA1418B55EA900BD729B /* Sources */,
+				50CBEA1518B55EA900BD729B /* Frameworks */,
+				50CBEA1618B55EA900BD729B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DriveSense_iOS;
+			productName = DriveSense_iOS;
+			productReference = 50CBEA1818B55EA900BD729B /* DriveSense_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50CBEA3818B55EAA00BD729B /* DriveSense_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50CBEA4D18B55EAA00BD729B /* Build configuration list for PBXNativeTarget "DriveSense_iOSTests" */;
+			buildPhases = (
+				50CBEA3518B55EAA00BD729B /* Sources */,
+				50CBEA3618B55EAA00BD729B /* Frameworks */,
+				50CBEA3718B55EAA00BD729B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50CBEA3F18B55EAA00BD729B /* PBXTargetDependency */,
+			);
+			name = DriveSense_iOSTests;
+			productName = DriveSense_iOSTests;
+			productReference = 50CBEA3918B55EAA00BD729B /* DriveSense_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50CBEA1018B55EA900BD729B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Mickey Barboi";
+				TargetAttributes = {
+					50CBEA3818B55EAA00BD729B = {
+						TestTargetID = 50CBEA1718B55EA900BD729B;
+					};
+				};
+			};
+			buildConfigurationList = 50CBEA1318B55EA900BD729B /* Build configuration list for PBXProject "DriveSense_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50CBEA0F18B55EA900BD729B;
+			productRefGroup = 50CBEA1918B55EA900BD729B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50CBEA1718B55EA900BD729B /* DriveSense_iOS */,
+				50CBEA3818B55EAA00BD729B /* DriveSense_iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50CBEA1618B55EA900BD729B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50CBEA3418B55EAA00BD729B /* Images.xcassets in Resources */,
+				50A7214718BA7D3700B2D218 /* Main_iPad.storyboard in Resources */,
+				50CBEA2618B55EA900BD729B /* InfoPlist.strings in Resources */,
+				50CBEA2F18B55EA900BD729B /* Main_iPhone.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50CBEA3718B55EAA00BD729B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50CBEA4518B55EAA00BD729B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50CBEA1418B55EA900BD729B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5043C65018BDD4AE007A7901 /* Trip.m in Sources */,
+				50A720F318BA7B0900B2D218 /* MapRootViewController.m in Sources */,
+				50CBEA2C18B55EA900BD729B /* AppDelegate.m in Sources */,
+				5043C64918BDC1D4007A7901 /* MapAnnotation.m in Sources */,
+				5043C64D18BDD4A0007A7901 /* GPSCoordinate.m in Sources */,
+				50A25BE718BD8D2B000EF19C /* Model.xcdatamodeld in Sources */,
+				50F08CB018BAB11F00B5F260 /* TripRecorder.m in Sources */,
+				50CBEA2818B55EA900BD729B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50CBEA3518B55EAA00BD729B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50CBEA4718B55EAA00BD729B /* DriveSense_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50CBEA3F18B55EAA00BD729B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50CBEA1718B55EA900BD729B /* DriveSense_iOS */;
+			targetProxy = 50CBEA3E18B55EAA00BD729B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50CBEA2418B55EA900BD729B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50CBEA2518B55EA900BD729B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		50CBEA2D18B55EA900BD729B /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50CBEA2E18B55EA900BD729B /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		50CBEA4318B55EAA00BD729B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50CBEA4418B55EAA00BD729B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50CBEA4818B55EAA00BD729B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50CBEA4918B55EAA00BD729B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50CBEA4B18B55EAA00BD729B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveSense_iOS/DriveSense_iOS-Prefix.pch";
+				INFOPLIST_FILE = "DriveSense_iOS/DriveSense_iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50CBEA4C18B55EAA00BD729B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveSense_iOS/DriveSense_iOS-Prefix.pch";
+				INFOPLIST_FILE = "DriveSense_iOS/DriveSense_iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		50CBEA4E18B55EAA00BD729B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DriveSense_iOS.app/DriveSense_iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveSense_iOS/DriveSense_iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DriveSense_iOSTests/DriveSense_iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		50CBEA4F18B55EAA00BD729B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DriveSense_iOS.app/DriveSense_iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveSense_iOS/DriveSense_iOS-Prefix.pch";
+				INFOPLIST_FILE = "DriveSense_iOSTests/DriveSense_iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50CBEA1318B55EA900BD729B /* Build configuration list for PBXProject "DriveSense_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50CBEA4818B55EAA00BD729B /* Debug */,
+				50CBEA4918B55EAA00BD729B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50CBEA4A18B55EAA00BD729B /* Build configuration list for PBXNativeTarget "DriveSense_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50CBEA4B18B55EAA00BD729B /* Debug */,
+				50CBEA4C18B55EAA00BD729B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50CBEA4D18B55EAA00BD729B /* Build configuration list for PBXNativeTarget "DriveSense_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50CBEA4E18B55EAA00BD729B /* Debug */,
+				50CBEA4F18B55EAA00BD729B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		50A25BE518BD8D2B000EF19C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				50A25BE618BD8D2B000EF19C /* Model.xcdatamodel */,
+			);
+			currentVersion = 50A25BE618BD8D2B000EF19C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 50CBEA1018B55EA900BD729B /* Project object */;
+}
