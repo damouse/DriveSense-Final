@@ -12,14 +12,18 @@
 #import "MapAnnotation.h"
 #import "Trip.h"
 #import "GPSCoordinate.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface MapRootViewController () {
     
     //a flag to indicate the controller is currently recording
     BOOL recording;
+    BOOL showingTrips;
     
     //used to save the final position of the view on the screen so we can animate to here later
     CGRect frameIn;
+    
+    CGRect frameContainer;
     
     //a counter to represent the total elapsed time
     int secondsRecording;
@@ -47,8 +51,8 @@
     
     //init recording to NO as a default
     recording = NO;
+    showingTrips = NO;
     [mapMain setDelegate:self];
-    
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -57,7 +61,10 @@
     [mapMain setUserTrackingMode:MKUserTrackingModeFollow];
     
     frameIn = viewRecordingContainer.frame;
+    frameContainer = container.frame;
+    
     [self animateViewOut];
+    [self animateTableOut];
 }
 
 - (void) didReceiveMemoryWarning {
@@ -102,13 +109,80 @@
 }
 
 - (IBAction)showTrips:(id)sender {
-    NSArray *trips = [[TripRecorder recorder] getTrips];
     
-    for(Trip *trip in trips) {
-        [self drawRouteForCoordinates:[trip coordinates]];
-        [self dropPinForCoordinate:[trip startCoordinate]];
-        [self dropPinForCoordinate:[trip endCoordinate]];
+    if(showingTrips) {
+        [mapMain removeAnnotations:mapMain.annotations];
+        [mapMain removeOverlays:mapMain.overlays];
+        [self animateTableOut];
     }
+    else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"updateTable" object:nil];
+        
+        NSArray *trips = [[TripRecorder recorder] getTrips];
+        
+        for(Trip *trip in trips) {
+            NSOrderedSet *coordinates = [trip coordinates];
+            [self drawRouteForCoordinates:coordinates];
+            [self dropPinForCoordinate:[trip startCoordinate]];
+            [self dropPinForCoordinate:[trip endCoordinate]];
+            
+            [self animateTableIn];
+        }
+    }
+    
+    showingTrips = !showingTrips;
+}
+
+- (IBAction)settings:(id)sender {
+    // Put together the dialog parameters
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   @"CS407 DriveSense Share", @"name",
+                                   @"Sample Post.", @"caption",
+                                   @"I just  learned how to set up Facebook Integration with iOS apps. If you want to do the same, you should take CS407 next semester!", @"description",
+                                   @"http://pages.cs.wisc.edu/~suman/courses/wiki/doku.php?id=407-spring2014", @"link",
+                                   @"http://i.imgur.com/g3Qc1HN.png", @"picture",
+                                   nil];
+    
+    // Show the feed dialog
+    [FBWebDialogs presentFeedDialogModallyWithSession:nil
+                                           parameters:params
+                                              handler:^(FBWebDialogResult result, NSURL *resultURL, NSError *error) {
+                                                  if (error) {
+                                                      // An error occurred, we need to handle the error
+                                                      // See: https://developers.facebook.com/docs/ios/errors
+                                                      NSLog([NSString stringWithFormat:@"Error publishing story: %@", error.description]);
+                                                  } else {
+                                                      if (result == FBWebDialogResultDialogNotCompleted) {
+                                                          // User cancelled.
+                                                          NSLog(@"User cancelled.");
+                                                      } else {
+                                                          // Handle the publish feed callback
+                                                          NSDictionary *urlParams = [self parseURLParams:[resultURL query]];
+                                                          
+                                                          if (![urlParams valueForKey:@"post_id"]) {
+                                                              // User cancelled.
+                                                              NSLog(@"User cancelled.");
+                                                              
+                                                          } else {
+                                                              // User clicked the Share button
+                                                              NSString *result = [NSString stringWithFormat: @"Posted story, id: %@", [urlParams valueForKey:@"post_id"]];
+                                                              NSLog(@"result %@", result);
+                                                          }
+                                                      }
+                                                  }
+                                              }];
+}
+
+- (NSDictionary*)parseURLParams:(NSString *)query {
+    NSArray *pairs = [query componentsSeparatedByString:@"&"];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    for (NSString *pair in pairs) {
+        NSArray *kv = [pair componentsSeparatedByString:@"="];
+        NSString *val =
+        [kv[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        params[kv[0]] = val;
+    }
+    return params;
 }
 
 
@@ -135,6 +209,23 @@
         newFrame.origin.y = y;
         
         viewRecordingContainer.frame =  newFrame;
+    }];
+}
+
+- (void) animateTableIn {
+    [UIView animateWithDuration:0.25 animations:^{
+        container.frame =  frameContainer;
+    }];
+}
+
+- (void) animateTableOut {
+    [UIView animateWithDuration:0.25 animations:^{
+        int y = self.view.frame.size.height;
+        
+        CGRect newFrame = frameContainer;
+        newFrame.origin.y = y;
+        
+        container.frame =  newFrame;
     }];
 }
 

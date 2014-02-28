@@ -59,10 +59,10 @@
     //start collecting data
     [locationManager startUpdatingLocation];
     
-    Trip *trip = [NSEntityDescription insertNewObjectForEntityForName:@"Trip" inManagedObjectContext:context];
+    currentTrip = [NSEntityDescription insertNewObjectForEntityForName:@"Trip" inManagedObjectContext:context];
     
-    trip.date = [NSDate date];
-    trip.name = @"name";
+    currentTrip.date = [NSDate date];
+    currentTrip.name = @"name";
     
     [self saveChanges];
     
@@ -115,6 +115,7 @@
     GPSCoordinate *coord = [NSEntityDescription insertNewObjectForEntityForName:@"GPSCoordinate" inManagedObjectContext:context];
     coord.lat = [NSNumber numberWithDouble:lastReceivedLocation.coordinate.latitude];
     coord.lon = [NSNumber numberWithDouble:lastReceivedLocation.coordinate.longitude];
+    coord.timestamp = [NSDate date];
     
     if(currentTrip.startCoordinate == nil)
         currentTrip.startCoordinate = coord;

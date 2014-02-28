@@ -31,9 +31,11 @@
     //the two labels in the slidein view that we change when a new trip starts
     __weak IBOutlet UILabel *labelTripName;
     __weak IBOutlet UILabel *labelDuration;
+    __weak IBOutlet UIView *container;
 }
 
 - (IBAction)record:(id)sender;
 - (IBAction)showTrips:(id)sender;
+- (IBAction)settings:(id)sender;
 
 @end
